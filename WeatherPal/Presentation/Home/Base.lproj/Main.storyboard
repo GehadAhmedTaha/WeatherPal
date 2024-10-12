@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="WeatherPal" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gCS-Gl-cAh">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="homeBG" translatesAutoresizingMaskIntoConstraints="NO" id="5PK-35-meN">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                    </imageView>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter City Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="O4i-zh-ibC">
+                                        <rect key="frame" x="30" y="70" width="333" height="34"/>
+                                        <color key="backgroundColor" white="1" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DvV-Z8-i8Z" customClass="EmptyView" customModule="WeatherPal" customModuleProvider="target">
+                                        <rect key="frame" x="30" y="204" width="333" height="300"/>
+                                        <color key="backgroundColor" white="1" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="300" id="aYT-bO-e1b"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="5PK-35-meN" secondAttribute="bottom" id="1x7-nd-Pmc"/>
+                                    <constraint firstItem="5PK-35-meN" firstAttribute="leading" secondItem="gCS-Gl-cAh" secondAttribute="leading" id="7Iv-3r-Hb4"/>
+                                    <constraint firstItem="O4i-zh-ibC" firstAttribute="leading" secondItem="gCS-Gl-cAh" secondAttribute="leading" constant="30" id="J28-mC-qRg"/>
+                                    <constraint firstAttribute="trailing" secondItem="O4i-zh-ibC" secondAttribute="trailing" priority="999" constant="30" id="K7d-hb-Rd8"/>
+                                    <constraint firstItem="DvV-Z8-i8Z" firstAttribute="top" secondItem="O4i-zh-ibC" secondAttribute="bottom" constant="100" id="R7F-AH-q3S"/>
+                                    <constraint firstItem="DvV-Z8-i8Z" firstAttribute="centerX" secondItem="gCS-Gl-cAh" secondAttribute="centerX" id="Sao-Uy-qz2"/>
+                                    <constraint firstAttribute="trailing" secondItem="5PK-35-meN" secondAttribute="trailing" id="T2E-Xy-cHt"/>
+                                    <constraint firstItem="5PK-35-meN" firstAttribute="top" secondItem="gCS-Gl-cAh" secondAttribute="top" id="boa-BS-1BO"/>
+                                    <constraint firstAttribute="trailing" secondItem="DvV-Z8-i8Z" secondAttribute="trailing" constant="30" id="efC-Ec-sSw"/>
+                                    <constraint firstItem="O4i-zh-ibC" firstAttribute="top" secondItem="gCS-Gl-cAh" secondAttribute="top" constant="70" id="pZV-sK-HaS"/>
+                                    <constraint firstItem="DvV-Z8-i8Z" firstAttribute="leading" secondItem="gCS-Gl-cAh" secondAttribute="leading" constant="30" id="qYm-79-d5C"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="gCS-Gl-cAh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="VRu-NA-KIT"/>
+                            <constraint firstAttribute="bottom" secondItem="gCS-Gl-cAh" secondAttribute="bottom" id="aTc-QG-wZl"/>
+                            <constraint firstItem="gCS-Gl-cAh" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="dJ0-AL-MNP"/>
+                            <constraint firstAttribute="trailing" secondItem="gCS-Gl-cAh" secondAttribute="trailing" id="xgG-7O-Z94"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="76" y="-2"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="homeBG" width="675" height="1200"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
