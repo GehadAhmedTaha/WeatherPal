@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import SwiftKeychainWrapper
 
 protocol WeatherRepoProtocol {
     func getCurrentWeather(cityName: String, completion: @escaping (WeatherResponseModel?) -> Void)

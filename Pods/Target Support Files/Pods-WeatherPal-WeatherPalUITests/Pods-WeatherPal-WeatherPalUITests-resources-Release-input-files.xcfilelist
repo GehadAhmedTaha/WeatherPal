@@ -1,0 +1,4 @@
+${PODS_ROOT}/Target Support Files/Pods-WeatherPal-WeatherPalUITests/Pods-WeatherPal-WeatherPalUITests-resources.sh
+${PODS_CONFIGURATION_BUILD_DIR}/Kingfisher/Kingfisher.bundle
+${PODS_CONFIGURATION_BUILD_DIR}/RxSwift/RxSwift_Privacy.bundle
+${PODS_CONFIGURATION_BUILD_DIR}/SwiftyJSON/SwiftyJSON.bundle

@@ -1,0 +1,28 @@
+PODS:
+  - ALLoadingView (1.1.5)
+  - Kingfisher (7.12.0)
+  - RxSwift (6.8.0)
+  - SwiftyJSON (5.0.2)
+
+DEPENDENCIES:
+  - ALLoadingView
+  - Kingfisher
+  - RxSwift
+  - SwiftyJSON
+
+SPEC REPOS:
+  trunk:
+    - ALLoadingView
+    - Kingfisher
+    - RxSwift
+    - SwiftyJSON
+
+SPEC CHECKSUMS:
+  ALLoadingView: 5f3a5e73402d3ec178dae51ebdb39c1d64c0a87b
+  Kingfisher: 53a10ea35051a436b5fb626ca2dd8f3144d755e9
+  RxSwift: 4e28be97cbcfeee614af26d83415febbf2bf6f45
+  SwiftyJSON: f5b1bf1cd8dd53cd25887ac0eabcfd92301c6a5a
+
+PODFILE CHECKSUM: c54167d62acb33d05f4487c1ff248a0d44df135b
+
+COCOAPODS: 1.15.2

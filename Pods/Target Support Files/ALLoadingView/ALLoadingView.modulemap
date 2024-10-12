@@ -1,0 +1,6 @@
+module ALLoadingView {
+  umbrella header "ALLoadingView-umbrella.h"
+
+  export *
+  module * { export * }
+}

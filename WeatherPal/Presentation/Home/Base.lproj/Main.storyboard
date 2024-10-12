@@ -24,37 +24,83 @@
                                     </imageView>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter City Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="O4i-zh-ibC">
                                         <rect key="frame" x="30" y="70" width="333" height="34"/>
-                                        <color key="backgroundColor" white="1" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" white="1" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DvV-Z8-i8Z" customClass="EmptyView" customModule="WeatherPal" customModuleProvider="target">
-                                        <rect key="frame" x="30" y="204" width="333" height="300"/>
+                                        <rect key="frame" x="30" y="276" width="333" height="300"/>
                                         <color key="backgroundColor" white="1" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="300" id="aYT-bO-e1b"/>
                                         </constraints>
                                     </view>
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zoO-9n-Cb2" customClass="CurrentWeatherView" customModule="WeatherPal" customModuleProvider="target">
+                                        <rect key="frame" x="30" y="251" width="333" height="350"/>
+                                        <color key="backgroundColor" white="1" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="350" id="dwt-uc-GLy"/>
+                                        </constraints>
+                                    </view>
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="56V-i0-ulY">
+                                        <rect key="frame" x="30" y="276" width="333" height="300"/>
+                                        <subviews>
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="gE9-g4-yBl">
+                                                <rect key="frame" x="0.0" y="50" width="333" height="200"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </tableView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="300" id="72j-zU-qQG"/>
+                                            <constraint firstAttribute="bottom" secondItem="gE9-g4-yBl" secondAttribute="bottom" constant="50" id="GAY-pg-A55"/>
+                                            <constraint firstItem="gE9-g4-yBl" firstAttribute="top" secondItem="56V-i0-ulY" secondAttribute="top" constant="50" id="OJe-sf-UaY"/>
+                                            <constraint firstAttribute="trailing" secondItem="gE9-g4-yBl" secondAttribute="trailing" id="czd-IM-E0R"/>
+                                            <constraint firstItem="gE9-g4-yBl" firstAttribute="leading" secondItem="56V-i0-ulY" secondAttribute="leading" id="dp7-CH-tEI"/>
+                                        </constraints>
+                                    </view>
+                                    <segmentedControl hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bordered" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="qwN-Hd-5h2">
+                                        <rect key="frame" x="75" y="134" width="243" height="32"/>
+                                        <segments>
+                                            <segment title="Current Weather"/>
+                                            <segment title="5 days weather"/>
+                                        </segments>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="selectedSegmentTintColor" white="1" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <action selector="indexChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="RqO-Or-TCe"/>
+                                        </connections>
+                                    </segmentedControl>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
+                                    <constraint firstItem="qwN-Hd-5h2" firstAttribute="top" secondItem="O4i-zh-ibC" secondAttribute="bottom" constant="30" id="079-7b-NsW"/>
                                     <constraint firstAttribute="bottom" secondItem="5PK-35-meN" secondAttribute="bottom" id="1x7-nd-Pmc"/>
                                     <constraint firstItem="5PK-35-meN" firstAttribute="leading" secondItem="gCS-Gl-cAh" secondAttribute="leading" id="7Iv-3r-Hb4"/>
+                                    <constraint firstItem="DvV-Z8-i8Z" firstAttribute="centerY" secondItem="gCS-Gl-cAh" secondAttribute="centerY" id="Chv-dP-yUZ"/>
+                                    <constraint firstItem="zoO-9n-Cb2" firstAttribute="trailing" secondItem="DvV-Z8-i8Z" secondAttribute="trailing" id="EU4-DU-ANZ"/>
                                     <constraint firstItem="O4i-zh-ibC" firstAttribute="leading" secondItem="gCS-Gl-cAh" secondAttribute="leading" constant="30" id="J28-mC-qRg"/>
                                     <constraint firstAttribute="trailing" secondItem="O4i-zh-ibC" secondAttribute="trailing" priority="999" constant="30" id="K7d-hb-Rd8"/>
-                                    <constraint firstItem="DvV-Z8-i8Z" firstAttribute="top" secondItem="O4i-zh-ibC" secondAttribute="bottom" constant="100" id="R7F-AH-q3S"/>
+                                    <constraint firstItem="qwN-Hd-5h2" firstAttribute="centerX" secondItem="gCS-Gl-cAh" secondAttribute="centerX" id="KKH-l0-W7R"/>
                                     <constraint firstItem="DvV-Z8-i8Z" firstAttribute="centerX" secondItem="gCS-Gl-cAh" secondAttribute="centerX" id="Sao-Uy-qz2"/>
                                     <constraint firstAttribute="trailing" secondItem="5PK-35-meN" secondAttribute="trailing" id="T2E-Xy-cHt"/>
+                                    <constraint firstItem="56V-i0-ulY" firstAttribute="centerX" secondItem="gCS-Gl-cAh" secondAttribute="centerX" id="X2q-ks-ycX"/>
+                                    <constraint firstItem="zoO-9n-Cb2" firstAttribute="centerY" secondItem="gCS-Gl-cAh" secondAttribute="centerY" id="YlF-uF-l2E"/>
+                                    <constraint firstItem="56V-i0-ulY" firstAttribute="centerY" secondItem="gCS-Gl-cAh" secondAttribute="centerY" id="afx-qZ-H16"/>
                                     <constraint firstItem="5PK-35-meN" firstAttribute="top" secondItem="gCS-Gl-cAh" secondAttribute="top" id="boa-BS-1BO"/>
+                                    <constraint firstItem="zoO-9n-Cb2" firstAttribute="centerX" secondItem="gCS-Gl-cAh" secondAttribute="centerX" id="duK-4T-vad"/>
                                     <constraint firstAttribute="trailing" secondItem="DvV-Z8-i8Z" secondAttribute="trailing" constant="30" id="efC-Ec-sSw"/>
+                                    <constraint firstItem="56V-i0-ulY" firstAttribute="trailing" secondItem="DvV-Z8-i8Z" secondAttribute="trailing" id="fXU-8h-dol"/>
                                     <constraint firstItem="O4i-zh-ibC" firstAttribute="top" secondItem="gCS-Gl-cAh" secondAttribute="top" constant="70" id="pZV-sK-HaS"/>
                                     <constraint firstItem="DvV-Z8-i8Z" firstAttribute="leading" secondItem="gCS-Gl-cAh" secondAttribute="leading" constant="30" id="qYm-79-d5C"/>
+                                    <constraint firstItem="56V-i0-ulY" firstAttribute="leading" secondItem="DvV-Z8-i8Z" secondAttribute="leading" id="uCh-Vx-rVA"/>
+                                    <constraint firstItem="zoO-9n-Cb2" firstAttribute="leading" secondItem="DvV-Z8-i8Z" secondAttribute="leading" id="wzo-xk-xJL"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.32156863810000003" green="0.52156865600000002" blue="0.85098040100000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="gCS-Gl-cAh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="VRu-NA-KIT"/>
                             <constraint firstAttribute="bottom" secondItem="gCS-Gl-cAh" secondAttribute="bottom" id="aTc-QG-wZl"/>
@@ -62,10 +108,18 @@
                             <constraint firstAttribute="trailing" secondItem="gCS-Gl-cAh" secondAttribute="trailing" id="xgG-7O-Z94"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="currentWeatherView" destination="zoO-9n-Cb2" id="PCx-Gl-zuc"/>
+                        <outlet property="emptyView" destination="DvV-Z8-i8Z" id="wn8-Ze-O5d"/>
+                        <outlet property="fullWeatherTableView" destination="gE9-g4-yBl" id="USf-Av-RVP"/>
+                        <outlet property="fullWeatherView" destination="56V-i0-ulY" id="ddf-u4-RZR"/>
+                        <outlet property="searchTextField" destination="O4i-zh-ibC" id="CzJ-iV-s99"/>
+                        <outlet property="segmentControl" destination="qwN-Hd-5h2" id="Sff-Tm-QTM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="76" y="-2"/>
+            <point key="canvasLocation" x="75.572519083969468" y="-2.1126760563380285"/>
         </scene>
     </scenes>
     <resources>

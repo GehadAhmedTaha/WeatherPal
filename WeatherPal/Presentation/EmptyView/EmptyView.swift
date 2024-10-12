@@ -9,12 +9,27 @@ import UIKit
 
 class EmptyView: UIView {
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    @IBOutlet weak var contentView: UIView!
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        commonInit()
     }
-    */
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        commonInit()
+    }
+    
+    private func commonInit() {
+        guard let view = loadFromNib() else {return}
+        self.addSubview(view)
+        view.frame = self.bounds
+        self.setupUI()
+    }
 
+    
+    private func setupUI() {
+        self.layer.cornerRadius = Constants.cornerRadius
+        self.layer.masksToBounds = true
+    }
 }

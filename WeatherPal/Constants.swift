@@ -6,12 +6,10 @@
 //
 
 import Foundation
-
+import UIKit
 struct Constants {
-    static let keywrapper_uniqueServiceName = "APIToken"
-    static let keywrapper_uniqueAccessGroup = "WeatherPalToken"
-    static let API_Token = "API_Token"
     static let weatherDaysCount = "5"
     static let NetworkBaseUrl = "https://api.weatherapi.com/v1/forecast.json"
-
+    static let cornerRadius = 10.0
+    static let selectedTextColor = UIColor.init(red: 82, green: 133, blue: 217, alpha: 1)
 }
